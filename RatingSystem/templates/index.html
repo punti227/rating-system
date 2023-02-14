@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'addproduct' %}"><button>Addproduct</button></a>
+<a href="{% url 'removeproduct' %}"><button>Removeproduct</button></a>
